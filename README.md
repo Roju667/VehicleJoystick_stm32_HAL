@@ -15,4 +15,4 @@ Other stuff that i used:
 - LED
 - LD1117AV33
 
-I built vehicle controller that you can find here : https://github.com/Roju667/VehicleJoystick_stm32_HAL
+I built vehicle controller that you can find here : https://github.com/Roju667/VehicleControls_stm32_HAL
