@@ -19,7 +19,9 @@ I built vehicle controller that you can find here : https://github.com/Roju667/V
 
 ![alt text](https://github.com/Roju667/VehicleJoystick_stm32_HAL/blob/main/Schematic_Bluetoothcontroller_2022-01-06.png?raw=true)  
 
-I made this abomination without any plan/experience - but it works! So it is perfect to me.
+I made this abomination without any plan/experience - but it works! So it is perfect to me.  
+
+![alt text](https://github.com/Roju667/VehicleControls_stm32_HAL/blob/main/cargif.gif)  
 
 ![alt text](https://github.com/Roju667/VehicleJoystick_stm32_HAL/blob/main/IMG_6702.JPG?raw=true)
 
