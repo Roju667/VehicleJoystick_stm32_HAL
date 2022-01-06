@@ -6,13 +6,13 @@ I programmed it using HAL library by STM32.
 
 Modules that i used :
 
-STM32F103C6T6 blue pill clone
-HC-05 bluetooth module for sending data
-Analog thumb joystick to control speed and direction
-Buttons to control motor/lights/reset
+- STM32F103C6T6 blue pill clone
+- HC-05 bluetooth module for sending data
+- Analog thumb joystick to control speed and direction
+- Buttons to control motor/lights/reset  
 Other stuff that i used:
-9V Batter
-1x LED
-LD1117AV33
+- 9V Batter
+- LED
+- LD1117AV33
 
 I built vehicle controller that you can find here : https://github.com/Roju667/VehicleJoystick_stm32_HAL
