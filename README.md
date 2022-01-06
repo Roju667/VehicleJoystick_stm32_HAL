@@ -16,3 +16,5 @@ Other stuff that i used:
 - LD1117AV33
 
 I built vehicle controller that you can find here : https://github.com/Roju667/VehicleControls_stm32_HAL
+
+![alt text](https://github.com/Roju667/VehicleJoystick_stm32_HAL/blob/main/Schematic_Bluetoothcontroller_2022-01-06.png?raw=true)
