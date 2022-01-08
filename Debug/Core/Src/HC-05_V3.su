@@ -9,7 +9,7 @@ HC-05_V3.c:326:6:HC05_SetINQM	56	static
 HC-05_V3.c:344:6:HC05_SetPassword	48	static
 HC-05_V3.c:361:6:HC05_SetConnectionMode	48	static
 HC-05_V3.c:380:6:HC05_SetUart	64	static
-HC-05_V3.c:400:6:HC05_ConnectToAddress	48	static
+HC-05_V3.c:402:6:HC05_ConnectToAddress	64	static
 HC-05_V3.c:425:6:HC05_Init	16	static
 HC-05_V3.c:496:6:HC05_ClearMsgPendingFlag	16	static
 HC-05_V3.c:508:9:HC05_CheckPendingMessages	24	static

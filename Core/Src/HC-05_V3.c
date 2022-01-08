@@ -391,24 +391,24 @@ void HC05_SetUart(HC05_t *hc05, uint32_t Baudrate,uint8_t Stopbit,uint8_t Parity
  * Set Uart parameters
  *
  * @param[*hc05]		- pointer to struct for HC05 bluetooth module
- * @param[*Address] 	- pointer to address, BT address format xxxx,xx,xxxxxx
+ * @param[Address1] 	- first part of BT address format XXXX,xx,xxxxxx
+ * @param[Address2] 	- second part of BT address format xxxx,XX,xxxxxx
+ * @param[Address3] 	- third part of BT address format xxxx,xx,XXXXXX
  * Address got from inquiring : 8327:0:8182
  * Address to connect : 		8327:00:008182
 
  * @return - void
  */
-void HC05_ConnectToAddress(HC05_t *hc05, uint8_t *Address)
+void HC05_ConnectToAddress(HC05_t *hc05, uint32_t Address1, uint32_t Address2, uint32_t Address3)
 {
 
 	uint8_t Msg[32];
 
-	sprintf((char*) Msg, "AT+PAIR=%s,5\n\r", Address);
+	sprintf((char*) Msg, "AT+PAIR=%04ld,%02ld,%06ld\n\r", Address1, Address2, Address3);
 	HC05_SendAndReceiveCmd(hc05, Msg);
-	sprintf((char*) Msg, "AT+BIND=%s\n\r", Address);
-	//sprintf((char*) Msg, "AT+BIND=8327,00,008182\n\r");
+	sprintf((char*) Msg, "AT+BIND=%04ld,%02ld,%06ld\n\r", Address1, Address2, Address3);
 	HC05_SendAndReceiveCmd(hc05, Msg);
-	sprintf((char*) Msg, "AT+LINK=%s\n\r", Address);
-	//sprintf((char*) Msg, "AT+LINK=8327,00,008182\n\r");
+	sprintf((char*) Msg, "AT+LINK=%04ld,%02ld,%06ld\n\r", Address1, Address2, Address3);
 	HC05_SendAndReceiveCmd(hc05, Msg);
 	return;
 
@@ -479,7 +479,7 @@ void HC05_Init(HC05_t *hc05, UART_HandleTypeDef *huart)
 
 
 	// Pair + bind + link to target device
-	HC05_TryAddress(hc05, 832, 70, 8);
+	HC05_ConnectToAddress(hc05,8327,0,8182);
 	// exit AT mode
 #endif
 
