@@ -481,6 +481,9 @@ void HC05_Init(HC05_t *hc05, UART_HandleTypeDef *huart)
 	// Pair + bind + link to target device
 	HC05_ConnectToAddress(hc05,8327,0,8182);
 	// exit AT mode
+	HC05_EN_LOW;
+	HC05_PWR_LOW;
+	HAL_Delay(1000);
 #endif
 
 	HC05_PWR_HIGH;
