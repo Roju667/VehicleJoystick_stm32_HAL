@@ -254,9 +254,9 @@ void HC05_Init(HC05_t *hc05, UART_HandleTypeDef *huart)
  8000250:	681b      	ldr	r3, [r3, #0]
  8000252:	f022 0204 	bic.w	r2, r2, #4
  8000256:	601a      	str	r2, [r3, #0]
-	// Pair + bind + link to target device
-	HC05_ConnectToAddress(hc05,8327,0,8182);
-	// exit AT mode
+	HC05_EN_LOW;
+	HC05_PWR_LOW;
+	HAL_Delay(1000);
 #endif
 
 	HC05_PWR_HIGH;
